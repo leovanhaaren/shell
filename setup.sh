@@ -16,4 +16,6 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 export KUBECONFIG=.kubeconfig:$HOME/.kube/config
 
+source ~/code/shell/dockerd-wsl.sh
+
 source ~/code/shell/custom.sh
