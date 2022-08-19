@@ -12,6 +12,12 @@ alias gb='git branch'
 alias rn='git log --pretty="- %s (%an)" $0'
 alias gm='git merge'
 
+function feature() {
+	git checkout master
+	git pull
+	git checkout -b feature/DEV-$1-$2
+}
+
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 export KUBECONFIG=.kubeconfig:$HOME/.kube/config
